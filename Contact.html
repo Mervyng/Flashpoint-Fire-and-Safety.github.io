@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Flashpoint Fire and Safety</title>
+
+  <!-- Corrected file path (no spaces) -->
+  <link rel="stylesheet" href="CSS STYLESHEET/Contact.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Optional: Fallback button style if not in CSS -->
+  <style>
+    .btn-primary {
+      background-color: #d32f2f;
+      color: #fff;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #b71c1c;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container flex-between">
+      <h1 class="logo">Flashpoint Fire and safety</h1>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav-menu" class="nav">
+        <ul class="nav-list">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Products.html">Products</a></li>
+          <li><a href="Contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" style="padding: 4rem 1rem;">
+      <h2 class="text-center" style="color: #d32f2f; margin-bottom: 1rem;">Contact Us</h2>
+      <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem auto; color: #1a1a1a;">
+        Have questions or need fire safety assistance? Send us a message and we'll get back to you promptly.
+      </p>
+
+      <form action="#" method="POST" class="contact-form" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.05);">
+        <label for="name" style="display: block; margin-bottom: 0.5rem; color: #1a1a1a; font-weight: 600;">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 0.5rem; font-size: 1rem; color: #1a1a1a;" />
+
+        <label for="email" style="display: block; margin-bottom: 0.5rem; color: #1a1a1a; font-weight: 600;">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 0.5rem; font-size: 1rem; color: #1a1a1a;" />
+
+        <label for="phone" style="display: block; margin-bottom: 0.5rem; color: #1a1a1a; font-weight: 600;">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(Optional)" style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 0.5rem; font-size: 1rem; color: #1a1a1a;" />
+
+        <label for="message" style="display: block; margin-bottom: 0.5rem; color: #1a1a1a; font-weight: 600;">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..." style="width: 100%; padding: 1rem; margin-bottom: 2rem; border: 1px solid #ccc; border-radius: 0.5rem; font-size: 1rem; color: #1a1a1a; resize: vertical;"></textarea>
+
+        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Flashpoint Fire and Safety. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Corrected JS path -->
+  <script src="javascript/Contact.js"></script>
+</body>
+</html>
