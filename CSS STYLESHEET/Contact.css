@@ -1,0 +1,269 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Container utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flex utilities */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  background-color: #1a1a1a;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #d32f2f;
+  cursor: default;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  color: #d32f2f;
+  outline: none;
+}
+
+.nav-list li a.active {
+  color: #d32f2f;
+  font-weight: 800;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* show only on mobile */
+}
+
+/* Main Section */
+main {
+  padding: 4rem 1rem;
+  background-color: #f0f0f0;
+  min-height: calc(100vh - 160px); /* Adjust based on header/footer height */
+}
+
+/* Section container override for main content */
+main > section.container {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+h2.text-center {
+  color: #d32f2f;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Paragraph */
+p.text-center {
+  color: #1a1a1a;
+  font-weight: 400;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+/* Contact form */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d32f2f;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #d32f2f;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #a52727;
+  outline: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive styles */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 60px; /* adjust based on header height */
+    right: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-list li a:hover,
+  .nav-list li a.active {
+    background-color: #d32f2f;
+    color: white;
+  }
+}
+
+/* Desktop Navigation */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex !important;
+    position: static;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-list li a {
+    padding: 0.5rem 0;
+    border: none;
+  }
+
+  .nav-list li a:hover,
+  .nav-list li a.active {
+    color: #d32f2f;
+    background: none;
+  }
+}
+/* End of CSS */

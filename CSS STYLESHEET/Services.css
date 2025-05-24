@@ -1,0 +1,239 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* === Utilities === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2.5rem;
+}
+
+/* === Header === */
+.header {
+  background-color: #d32f2f;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Hero Section === */
+.hero.small-hero {
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+  color: #ffffff;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === Sections === */
+.section {
+  padding: 5rem 1rem;
+}
+
+/* === Services Section === */
+.services-list {
+  background-color: #f8f8f8;
+}
+
+.service-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-img {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* === Call to Action Button === */
+.btn-primary {
+  background-color: #d32f2f;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.btn-primary:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === Footer === */
+.footer {
+  background-color: #d32f2f;
+  color: #ffffff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* === Responsive Navigation === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d32f2f;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+/* === Media Queries === */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (max-width: 992px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+  }
+}
